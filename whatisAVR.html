@@ -670,20 +670,21 @@
 <li><strong>Other Special Controllers</strong> : Dedicated purposes like LCD, USB etc. controllers</li>
 </ul>
 <hr />
-<script src="https://giscus.app/client.js"
-        data-repo="safabey/avr-notes"
-        data-repo-id="R_kgDOP0lO_A"
-        data-category="Comments"
-        data-category-id="DIC_kwDOP0lO_M4CvwBX"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const giscusScript = document.createElement('script');
+  giscusScript.src = "https://giscus.app/client.js";
+  giscusScript.setAttribute("data-repo", "safabey/avr-notes");
+  giscusScript.setAttribute("data-repo-id", "R_kgDOP0lO_A");
+  giscusScript.setAttribute("data-category", "Comments");
+  giscusScript.setAttribute("data-category-id", "DIC_kwDOP0lO_M4CvwBX");
+  giscusScript.setAttribute("data-mapping", "pathname");
+  giscusScript.setAttribute("data-reactions-enabled", "1");
+  giscusScript.setAttribute("data-theme", window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  giscusScript.crossOrigin = "anonymous";
+  giscusScript.async = true;
+  document.getElementById('giscus_container').appendChild(giscusScript);
+});
 </script>
 
 
