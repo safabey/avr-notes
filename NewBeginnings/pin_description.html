@@ -11,23 +11,25 @@
       
       
       
+        <link rel="prev" href="whatisAVR.html">
       
-        <link rel="next" href="about.html">
+      
+        <link rel="next" href="settingup.html">
       
       
-      <link rel="icon" href="icon.png">
+      <link rel="icon" href="../icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>AVR Assembly Quick Notes</title>
+        <title>Pin Descriptions - AVR Assembly Quick Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="extra.css">
+      <link rel="stylesheet" href="../extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome" class="md-skip">
+        <a href="#pin-descriptions" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="AVR Assembly Quick Notes" class="md-header__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
+    <a href="../index.html" title="AVR Assembly Quick Notes" class="md-header__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
       
-  <img src="icon.png" alt="logo">
+  <img src="../icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Pin Descriptions
             
           </span>
         </div>
@@ -239,9 +241,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="AVR Assembly Quick Notes" class="md-nav__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
+    <a href="../index.html" title="AVR Assembly Quick Notes" class="md-nav__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
       
-  <img src="icon.png" alt="logo">
+  <img src="../icon.png" alt="logo">
 
     </a>
     AVR Assembly Quick Notes
@@ -265,19 +267,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -288,7 +281,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -300,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about.html" class="md-nav__link">
+      <a href="../about.html" class="md-nav__link">
         
   
   
@@ -319,18 +311,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -346,7 +340,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             New Beginnings
@@ -360,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="NewBeginnings/whatisAVR.html" class="md-nav__link">
+      <a href="whatisAVR.html" class="md-nav__link">
         
   
   
@@ -380,10 +374,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="NewBeginnings/pin_description.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pin Descriptions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pin_description.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -394,6 +410,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      GND
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVCC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aref" class="md-nav__link">
+    <span class="md-ellipsis">
+      AREF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-b-pb70" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port B (PB7:0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-c-pc50" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port C (PC5:0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pc6reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      PC6/RESET
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-d-pd70" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port D (PD7:0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adc76" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADC7:6
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -406,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="NewBeginnings/settingup.html" class="md-nav__link">
+      <a href="settingup.html" class="md-nav__link">
         
   
   
@@ -474,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_data_transfers.html" class="md-nav__link">
+      <a href="../WorkingWithGPR/registers_data_transfers.html" class="md-nav__link">
         
   
   
@@ -497,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_logical.html" class="md-nav__link">
+      <a href="../WorkingWithGPR/registers_logical.html" class="md-nav__link">
         
   
   
@@ -520,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_arithmetic.html" class="md-nav__link">
+      <a href="../WorkingWithGPR/registers_arithmetic.html" class="md-nav__link">
         
   
   
@@ -543,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_shifts.html" class="md-nav__link">
+      <a href="../WorkingWithGPR/registers_shifts.html" class="md-nav__link">
         
   
   
@@ -566,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_manipulation.html" class="md-nav__link">
+      <a href="../WorkingWithGPR/registers_manipulation.html" class="md-nav__link">
         
   
   
@@ -634,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CodeExamples/addition.html" class="md-nav__link">
+      <a href="../CodeExamples/addition.html" class="md-nav__link">
         
   
   
@@ -657,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CodeExamples/blink.html" class="md-nav__link">
+      <a href="../CodeExamples/blink.html" class="md-nav__link">
         
   
   
@@ -687,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="instructions.html" class="md-nav__link">
+      <a href="../instructions.html" class="md-nav__link">
         
   
   
@@ -722,6 +839,95 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gnd" class="md-nav__link">
+    <span class="md-ellipsis">
+      GND
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVCC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aref" class="md-nav__link">
+    <span class="md-ellipsis">
+      AREF
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-b-pb70" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port B (PB7:0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-c-pc50" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port C (PC5:0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pc6reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      PC6/RESET
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#port-d-pd70" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port D (PD7:0)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adc76" class="md-nav__link">
+    <span class="md-ellipsis">
+      ADC7:6
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -739,32 +945,65 @@
   
 
 
-<hr />
-<center>
-<h1>AVR Assembly Quick Notes</h1>
-</center>
-<hr />
-<p><img alt="Visitor Count" src="https://visitor-badge.laobi.icu/badge?page_id=kullanici.avr-notes" /></p>
-<h1 id="welcome">Welcome!<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h1>
-<p>Hello there!</p>
-<p>This site started as my own learning notebook while studying <strong>AVR Assembly</strong>.
-Over time, I hope it will grow into a more organized resource that others might also benefit from.</p>
-<p>I tried to make the content simple, structured, and practical:</p>
+<h1 id="pin-descriptions">Pin Descriptions<a class="headerlink" href="#pin-descriptions" title="Permanent link">&para;</a></h1>
+<p float="left">
+  <img src="block_diagram_1.png" width="40%" />
+  <img src="IC_diagram.png" width="50%" />
+</p>
+
+<blockquote>
+<p>Block Diagrams from <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf">DataSheet ATMEL 7810: Page 6 Figure 2-1</a> &amp; <a href="https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf">DataSheet ATMEL 42735: Page 14 Figure 5.1</a></p>
+</blockquote>
+<h2 id="vcc">VCC<a class="headerlink" href="#vcc" title="Permanent link">&para;</a></h2>
+<p>Power Supply:</p>
 <ul>
-<li>Basics of AVR architecture</li>
-<li>Handy code examples</li>
-<li>Explanations of most instructions</li>
-<li>Extra notes and diagrams I prepared</li>
+<li>2.7V to 5.5V for up to 8MHz</li>
+<li>4.5V to 5.5V for up to 16MHz</li>
 </ul>
-<p>Think of this as a mix between <strong>study notes</strong> and a <strong>cheat-sheet</strong>😅.
-If you find it helpful, feel free to leave comments and share your ideas!</p>
 <hr />
-<p>Special thanks to <a href="http://rjhcoding.com">RJH Coding</a> and the Wikimedia community for providing open resources,<br />
-such as the <a href="https://commons.wikimedia.org/wiki/File:Pinout_of_ARDUINO_Board_and_ATMega328PU.svg">Arduino &amp; ATmega328P pinout diagram</a>.</p>
+<h2 id="gnd">GND<a class="headerlink" href="#gnd" title="Permanent link">&para;</a></h2>
+<p>Ground.</p>
 <hr />
-<p align='center'>⚠️ <b>Still under development</b> ⚠️</p>
+<h2 id="avcc">AV<sub>CC</sub><a class="headerlink" href="#avcc" title="Permanent link">&para;</a></h2>
+<p>AVCC is the supply voltage pin for the A/D converter. It should be externally connected to VCC, even if
+the ADC is not used. If the ADC is used, it should be connected to VCC through a low-pass filter.</p>
 <hr />
-<center><b>Ahmet Safa BAŞARA</b> © 2025</center>
+<h2 id="aref">AREF<a class="headerlink" href="#aref" title="Permanent link">&para;</a></h2>
+<p>Analog reference pin for the A/D converter.</p>
+<hr />
+<h2 id="port-b-pb70">Port B (PB7:0)<a class="headerlink" href="#port-b-pb70" title="Permanent link">&para;</a></h2>
+<p>Port B is an 8-bit bi-directional I/O port with internal pull-up resistors.</p>
+<hr />
+<h2 id="port-c-pc50">Port C (PC5:0)<a class="headerlink" href="#port-c-pc50" title="Permanent link">&para;</a></h2>
+<p>Port C is a 7-bit bi-directional I/O port with internal pull-up resistors.</p>
+<hr />
+<h2 id="pc6reset">PC6/RESET<a class="headerlink" href="#pc6reset" title="Permanent link">&para;</a></h2>
+<p>If the RSTDISBL Fuse is programmed, PC6 is used as an I/O pin. Note that the electrical characteristics
+of PC6 differ from those of the other pins of Port C.</p>
+<p>If the RSTDISBL Fuse is unprogrammed, PC6 is used as a Reset input. </p>
+<hr />
+<h2 id="port-d-pd70">Port D (PD7:0)<a class="headerlink" href="#port-d-pd70" title="Permanent link">&para;</a></h2>
+<p>Port D is an 8-bit bi-directional I/O port with internal pull-up resistors.</p>
+<hr />
+<h2 id="adc76">ADC7:6<a class="headerlink" href="#adc76" title="Permanent link">&para;</a></h2>
+<p>In the TQFP and VFQFN package, ADC[7:6] serve as analog inputs to the A/D converter. These pins are
+powered from the analog supply and serve as 10-bit ADC channels.</p>
+<hr />
+<script src="https://giscus.app/client.js"
+        data-repo="safabey/avr-notes"
+        data-repo-id="R_kgDOP0lO_A"
+        data-category="Comments"
+        data-category-id="DIC_kwDOP0lO_M4CvwBX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 
 
 
@@ -799,15 +1038,31 @@ such as the <a href="https://commons.wikimedia.org/wiki/File:Pinout_of_ARDUINO_B
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="whatisAVR.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: What is AVR">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                What is AVR
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="about.html" class="md-footer__link md-footer__link--next" aria-label="Next: About">
+          <a href="settingup.html" class="md-footer__link md-footer__link--next" aria-label="Next: Setting Up Environment">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About
+                Setting Up Environment
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -873,10 +1128,10 @@ such as the <a href="https://commons.wikimedia.org/wiki/File:Pinout_of_ARDUINO_B
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "toc.follow", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "toc.follow", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
