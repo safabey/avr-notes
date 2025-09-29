@@ -11,23 +11,25 @@
       
       
       
+        <link rel="prev" href="registers_arithmetic.html">
       
-        <link rel="next" href="about.html">
+      
+        <link rel="next" href="registers_manipulation.html">
       
       
-      <link rel="icon" href="icon.png">
+      <link rel="icon" href="../icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>AVR Assembly Quick Notes</title>
+        <title>Bit Shifts - AVR Assembly Quick Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="extra.css">
+      <link rel="stylesheet" href="../extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome" class="md-skip">
+        <a href="#lsl" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="AVR Assembly Quick Notes" class="md-header__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
+    <a href="../index.html" title="AVR Assembly Quick Notes" class="md-header__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
       
-  <img src="icon.png" alt="logo">
+  <img src="../icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Bit Shifts
             
           </span>
         </div>
@@ -239,9 +241,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="AVR Assembly Quick Notes" class="md-nav__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
+    <a href="../index.html" title="AVR Assembly Quick Notes" class="md-nav__button md-logo" aria-label="AVR Assembly Quick Notes" data-md-component="logo">
       
-  <img src="icon.png" alt="logo">
+  <img src="../icon.png" alt="logo">
 
     </a>
     AVR Assembly Quick Notes
@@ -265,19 +267,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -288,7 +281,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -300,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about.html" class="md-nav__link">
+      <a href="../about.html" class="md-nav__link">
         
   
   
@@ -360,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="NewBeginnings/whatisAVR.html" class="md-nav__link">
+      <a href="../NewBeginnings/whatisAVR.html" class="md-nav__link">
         
   
   
@@ -383,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="NewBeginnings/pin_description.html" class="md-nav__link">
+      <a href="../NewBeginnings/pin_description.html" class="md-nav__link">
         
   
   
@@ -406,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="NewBeginnings/settingup.html" class="md-nav__link">
+      <a href="../NewBeginnings/settingup.html" class="md-nav__link">
         
   
   
@@ -433,18 +425,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -460,7 +454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Working with General Purpose Registers
@@ -474,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_data_transfers.html" class="md-nav__link">
+      <a href="registers_data_transfers.html" class="md-nav__link">
         
   
   
@@ -497,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_logical.html" class="md-nav__link">
+      <a href="registers_logical.html" class="md-nav__link">
         
   
   
@@ -520,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_arithmetic.html" class="md-nav__link">
+      <a href="registers_arithmetic.html" class="md-nav__link">
         
   
   
@@ -540,10 +534,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_shifts.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bit Shifts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="registers_shifts.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -554,6 +568,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::lsl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::lsr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rol" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::rol
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ror" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::ror
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::asr
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -566,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="WorkingWithGPR/registers_manipulation.html" class="md-nav__link">
+      <a href="registers_manipulation.html" class="md-nav__link">
         
   
   
@@ -634,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CodeExamples/addition.html" class="md-nav__link">
+      <a href="../CodeExamples/addition.html" class="md-nav__link">
         
   
   
@@ -657,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="CodeExamples/blink.html" class="md-nav__link">
+      <a href="../CodeExamples/blink.html" class="md-nav__link">
         
   
   
@@ -687,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="instructions.html" class="md-nav__link">
+      <a href="../instructions.html" class="md-nav__link">
         
   
   
@@ -719,8 +796,59 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::lsl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::lsr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rol" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::rol
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ror" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::ror
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::asr
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -739,32 +867,94 @@
   
 
 
+<h1>Bit Shifts</h1>
 <hr />
-<center>
-<h1>AVR Assembly Quick Notes</h1>
-</center>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Mnemonic</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Cycles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>lsl</code></td>
+<td style="text-align: center;">logical shift left</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>lsr</code></td>
+<td style="text-align: center;">logical shift Right</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>rol</code></td>
+<td style="text-align: center;">rotate left through carry</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>ror</code></td>
+<td style="text-align: center;">rotate right through carry</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>asr</code></td>
+<td style="text-align: center;">arithmetic shift right</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lsl">::<code>lsl</code><a class="headerlink" href="#lsl" title="Permanent link">&para;</a></h2>
+<p>Performs logical bit shift to <strong>LEFT</strong> with a <strong><em>zero</em></strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">ldi</span><span class="w">   </span><span class="no">r16</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">b00001111</span>
+<span class="nf">lsl</span><span class="w">   </span><span class="no">r16</span><span class="w">   </span><span class="c1">; r16 :&gt; 0b00011110</span>
+<span class="err">&lt;---</span>
+</code></pre></div>
+<h2 id="lsr">::<code>lsr</code><a class="headerlink" href="#lsr" title="Permanent link">&para;</a></h2>
+<p>Performs logical bit shift to <strong>RIGHT</strong> with a <strong><em>zero</em></strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">ldi</span><span class="w">   </span><span class="no">r16</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">b00001111</span>
+<span class="nf">lsr</span><span class="w">   </span><span class="no">r16</span><span class="w">   </span><span class="c1">; r16 :&gt; 0b0000111</span>
+<span class="err">--&gt;</span>
+</code></pre></div>
+<h2 id="rol">::<code>rol</code><a class="headerlink" href="#rol" title="Permanent link">&para;</a></h2>
+<p>Similar with <code>lsl</code>. Adds <strong><em>zero</em></strong> or <strong><em>one</em></strong> according to the carry bit <em>(status register)</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">ldi</span><span class="w">   </span><span class="no">r16</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">b10101010</span>
+<span class="nf">ldi</span><span class="w">   </span><span class="no">r17</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">b10101010</span>
+
+<span class="nf">lsl</span><span class="w">   </span><span class="no">r16</span><span class="w">   </span><span class="c1">; r16 :&gt; 0b01010100</span>
+<span class="nf">rol</span><span class="w">   </span><span class="no">r17</span><span class="w">   </span><span class="c1">; r17 :&gt; 0b01010101 adds last bit shift to first bit</span>
+</code></pre></div>
+<h2 id="ror">::<code>ror</code><a class="headerlink" href="#ror" title="Permanent link">&para;</a></h2>
+<p>Similar with <code>lsr</code>. Adds <strong><em>zero</em></strong> or <strong><em>one</em></strong> according to the carry bit <em>(status register)</em>.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">ldi</span><span class="w">   </span><span class="no">r16</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">b10101010</span>
+<span class="nf">ldi</span><span class="w">   </span><span class="no">r17</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">b10101010</span>
+
+<span class="nf">lsl</span><span class="w">   </span><span class="no">r16</span><span class="w">   </span><span class="c1">; r16 :&gt; 0b01010101</span>
+<span class="nf">ror</span><span class="w">   </span><span class="no">r17</span><span class="w">   </span><span class="c1">; r17 :&gt; 0b01010101 adds previous first bit shift to last bit</span>
+</code></pre></div>
+<h2 id="asr">::<code>asr</code><a class="headerlink" href="#asr" title="Permanent link">&para;</a></h2>
+<p>Without changing sign of the value, this allows us to divide the value with 2.
+This keeps 7<sup>th</sup> Bit unchanged. And 6<sup>th</sup> Bit will be carry bit.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">ldi</span><span class="w">   </span><span class="no">r16</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="no">b10000001</span><span class="w">   </span><span class="c1">; -127</span>
+<span class="nf">asr</span><span class="w">   </span><span class="no">r16</span><span class="w">   </span><span class="c1">; r16 :&gt; 0b11000000 = -64</span>
+</code></pre></div>
 <hr />
-<p><img alt="Visitor Count" src="https://visitor-badge.laobi.icu/badge?page_id=kullanici.avr-notes" /></p>
-<h1 id="welcome">Welcome!<a class="headerlink" href="#welcome" title="Permanent link">&para;</a></h1>
-<p>Hello there!</p>
-<p>This site started as my own learning notebook while studying <strong>AVR Assembly</strong>.
-Over time, I hope it will grow into a more organized resource that others might also benefit from.</p>
-<p>I tried to make the content simple, structured, and practical:</p>
-<ul>
-<li>Basics of AVR architecture</li>
-<li>Handy code examples</li>
-<li>Explanations of most instructions</li>
-<li>Extra notes and diagrams I prepared</li>
-</ul>
-<p>Think of this as a mix between <strong>study notes</strong> and a <strong>cheat-sheet</strong>😅.
-If you find it helpful, feel free to leave comments and share your ideas!</p>
-<hr />
-<p>Special thanks to <a href="http://rjhcoding.com">RJH Coding</a> and the Wikimedia community for providing open resources,<br />
-such as the <a href="https://commons.wikimedia.org/wiki/File:Pinout_of_ARDUINO_Board_and_ATMega328PU.svg">Arduino &amp; ATmega328P pinout diagram</a>.</p>
-<hr />
-<p align='center'>⚠️ <b>Still under development</b> ⚠️</p>
-<hr />
-<center><b>Ahmet Safa BAŞARA</b> © 2025</center>
+<script src="https://giscus.app/client.js"
+        data-repo="safabey/avr-notes"
+        data-repo-id="R_kgDOP0lO_A"
+        data-category="Comments"
+        data-category-id="DIC_kwDOP0lO_M4CvwBX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 
 
 
@@ -799,15 +989,31 @@ such as the <a href="https://commons.wikimedia.org/wiki/File:Pinout_of_ARDUINO_B
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="registers_arithmetic.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Arithmetic Instructions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Arithmetic Instructions
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="about.html" class="md-footer__link md-footer__link--next" aria-label="Next: About">
+          <a href="registers_manipulation.html" class="md-footer__link md-footer__link--next" aria-label="Next: Bit Manipulations">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About
+                Bit Manipulations
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -873,10 +1079,10 @@ such as the <a href="https://commons.wikimedia.org/wiki/File:Pinout_of_ARDUINO_B
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "toc.follow", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "toc.follow", "navigation.top", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
