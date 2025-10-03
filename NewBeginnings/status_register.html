@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../about.html">
+        <link rel="prev" href="settingup.html">
       
       
-        <link rel="next" href="pin_description.html">
+        <link rel="next" href="../WorkingWithGPR/registers_data_transfers.html">
       
       
       <link rel="icon" href="../icon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>What is AVR - AVR Assembly Quick Notes</title>
+        <title>Status Register - AVR Assembly Quick Notes</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#what-is-avr" class="md-skip">
+        <a href="#status-register" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              What is AVR
+              Status Register
             
           </span>
         </div>
@@ -351,19 +351,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="whatisAVR.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="whatisAVR.html" class="md-nav__link">
         
   
   
@@ -374,7 +365,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -430,10 +420,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="status_register.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Status Register
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="status_register.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -444,6 +456,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bit-0-c-carry-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 0 - C: Carry Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-1-z-zero-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 1 - Z: Zero Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-2-n-negative-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 2 - N: Negative Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-3-v-twos-complement-overflow-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 3 - V: Two's Complement Overflow Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-4-s-sign-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 4 - S: Sign Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-5-h-half-carry-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 5 - H: Half Carry Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-6-t-bit-copy-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 6 - T: Bit Copy Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-7-i-global-interrupt-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 7 - I: Global Interrupt Enable
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -749,6 +853,86 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bit-0-c-carry-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 0 - C: Carry Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-1-z-zero-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 1 - Z: Zero Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-2-n-negative-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 2 - N: Negative Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-3-v-twos-complement-overflow-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 3 - V: Two's Complement Overflow Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-4-s-sign-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 4 - S: Sign Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-5-h-half-carry-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 5 - H: Half Carry Flag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-6-t-bit-copy-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 6 - T: Bit Copy Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bit-7-i-global-interrupt-enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bit 7 - I: Global Interrupt Enable
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -766,58 +950,70 @@
   
 
 
-<h1 id="what-is-avr">What is AVR?<a class="headerlink" href="#what-is-avr" title="Permanent link">&para;</a></h1>
-<p>AVR is an 8-Bit family of microcontrollers<a href="https://en.wikipedia.org/wiki/Microcontroller"><sup>[*]</sup></a> built on the RISC architecture. They are inexpensive, relatively fast and offer some powerful features that make them a popular choice in embedded systems and hobby projects.</p>
-<p>Atmel (nowadays Microchip) divided microcontrollers into several groups:</p>
-<ul>
-<li><strong>AT90Sxxxx</strong>: Old classic AVR series, not recommended for new designs</li>
-<li><strong>ATtiny</strong>: Designed for small projects. Minimal I/O, memory but aimed at low power consumption</li>
-<li><strong>ATmega</strong>: Same core similar to ATtiny, with few differences. Also more I/O and memory</li>
-<li><strong>Other Special Controllers</strong> : Dedicated purposes like LCD, USB etc. controllers</li>
-</ul>
-<hr />
-<h1 id="atmega328p-features">ATmega328P Features<a class="headerlink" href="#atmega328p-features" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>There is only one difference between ATmega328 and ATmega328<strong>P</strong>: <strong><em>P</em></strong> version has low power consumption!</p>
-</blockquote>
-<ul>
-<li>Harvard 8-Bit RISC architecture</li>
-<li>131 instructions</li>
-<li>Up to 20MHz Clock Rate Support</li>
-<li>32Kb self-programmable flash program memory</li>
-<li>1Kb EEPROM</li>
-<li>2Kb SRAM</li>
-<li>6 PWM Channels</li>
-<li>8 Channel 10 Bit ADC</li>
-<li>2x8-Bit Counters</li>
-<li>1x10-Bit Counter</li>
-<li>23 Programmable I/O lines</li>
-<li>Speed Grade <ul>
-<li>0 - 4MHz @ 1.8 - 5.5V</li>
-<li>0 - 10MHz @ 2.7 - 5.5V</li>
-<li>0 - 20MHz @ 4.5 - 5.5V</li>
-</ul>
-</li>
-<li>-40°C to +105°C Temperature Range</li>
-</ul>
-<blockquote>
-<p>The data above are from <a href="https://docs.arduino.cc/resources/datasheets/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf">the Original Microchip Datasheet - ATMEL 42735</a>.</p>
-</blockquote>
+<h1 id="status-register">Status Register<a class="headerlink" href="#status-register" title="Permanent link">&para;</a></h1>
+<p>The <strong>Status Register</strong> is an 8-Bit register that holds information about the result of the most recently executed arithmetic instructions. This information could be used for conditional branching or manipulating the program flow. </p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">⚠️ REMINDER</th>
+<th style="text-align: center;">⚠️ DON'T FORGET</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>ATMEL 42735</strong>: for hobbiest mostly :D</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>ATMEL 7810</strong>: for automotive sector mostly :)</td>
+<td style="text-align: center;"><strong>After all ALU instructions, the status register will be cleared.</strong></td>
 </tr>
 </tbody>
 </table>
+<style type="text/css">.tg-sort-header::-moz-selection{background:0 0}.tg-sort-header::selection{background:0 0}.tg-sort-header{cursor:pointer}.tg-sort-header:after{content:'';float:right;margin-top:7px;border-width:0 5px 5px;border-style:solid;border-color:#404040 transparent;visibility:hidden}.tg-sort-header:hover:after{visibility:visible}.tg-sort-asc:after,.tg-sort-asc:hover:after,.tg-sort-desc:after{visibility:visible;opacity:.4}.tg-sort-desc:after{border-bottom:none;border-width:5px 5px 0}@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
+<div class="tg-wrap"><table id="tg-FwESr" style="border-collapse:collapse;border-spacing:0;margin:0px auto;table-layout: fixed; width: 497px" class="tg"><colgroup><col style="width: 133px"><col style="width: 50px"><col style="width: 50px"><col style="width: 48px"><col style="width: 43px"><col style="width: 45px"><col style="width: 43px"><col style="width: 43px"><col style="width: 42px"></colgroup>
+<thead>
+<tr><th style="background-color:#ffffff;border-style:solid;border-width:0px;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:normal;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:right;top:-1px;vertical-align:top;will-change:transform;word-break:normal">Bit  </th><th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">7</th>
+<th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">6</th><th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">5</th>
+<th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">4</th><th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">3</th>
+<th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">2</th><th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">1</th>
+<th style="background-color:#57a0a4;border-color:#343434;border-style:solid;border-width:0px;color:#ffffff;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;font-weight:bold;overflow:hidden;padding:10px 5px;position:-webkit-sticky;position:sticky;text-align:center;top:-1px;vertical-align:top;will-change:transform;word-break:normal">0</th></tr>
+</thead>
+<tbody>
+<tr><td style="background-color:#ffffff;border-style:solid;border-width:0px;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">Flag  </td><td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">I</td><td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">T</td><td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">H</td>
+<td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">S</td><td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">V</td><td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">N</td><td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">Z</td>
+<td style="background-color:#ecf4ff;border-color:#dae8fc;border-style:solid;border-width:0px;font-family:serif !important;font-size:24px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">C</td></tr>
+<tr><td style="background-color:#ffffff;border-style:solid;border-width:0px;font-family:Verdana, Geneva, sans-serif !important;font-size:20px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">Access  </td><td style="background-color:#efefef;border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:18px;font-style:italic;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal" colspan="8">Read / Write</td></tr></tbody></table></div>
+<script charset="utf-8">var TGSort=window.TGSort||function(n){"use strict";function r(n){return n?n.length:0}function t(n,t,e,o=0){for(e=r(n);o<e;++o)t(n[o],o)}function e(n){return n.split("").reverse().join("")}function o(n){var e=n[0];return t(n,function(n){for(;!n.startsWith(e);)e=e.substring(0,r(e)-1)}),r(e)}function u(n,r,e=[]){return t(n,function(n){r(n)&&e.push(n)}),e}var a=parseFloat;function i(n,r){return function(t){var e="";return t.replace(n,function(n,t,o){return e=t.replace(r,"")+"."+(o||"").substring(1)}),a(e)}}var s=i(/^(?:\s*)([+-]?(?:\d+)(?:,\d{3})*)(\.\d*)?$/g,/,/g),c=i(/^(?:\s*)([+-]?(?:\d+)(?:\.\d{3})*)(,\d*)?$/g,/\./g);function f(n){var t=a(n);return!isNaN(t)&&r(""+t)+1>=r(n)?t:NaN}function d(n){var e=[],o=n;return t([f,s,c],function(u){var a=[],i=[];t(n,function(n,r){r=u(n),a.push(r),r||i.push(n)}),r(i)<r(o)&&(o=i,e=a)}),r(u(o,function(n){return n==o[0]}))==r(o)?e:[]}function v(n){if("TABLE"==n.nodeName){for(var a=function(r){var e,o,u=[],a=[];return function n(r,e){e(r),t(r.childNodes,function(r){n(r,e)})}(n,function(n){"TR"==(o=n.nodeName)?(e=[],u.push(e),a.push(n)):"TD"!=o&&"TH"!=o||e.push(n)}),[u,a]}(),i=a[0],s=a[1],c=r(i),f=c>1&&r(i[0])<r(i[1])?1:0,v=f+1,p=i[f],h=r(p),l=[],g=[],N=[],m=v;m<c;++m){for(var T=0;T<h;++T){r(g)<h&&g.push([]);var C=i[m][T],L=C.textContent||C.innerText||"";g[T].push(L.trim())}N.push(m-v)}t(p,function(n,t){l[t]=0;var a=n.classList;a.add("tg-sort-header"),n.addEventListener("click",function(){var n=l[t];!function(){for(var n=0;n<h;++n){var r=p[n].classList;r.remove("tg-sort-asc"),r.remove("tg-sort-desc"),l[n]=0}}(),(n=1==n?-1:+!n)&&a.add(n>0?"tg-sort-asc":"tg-sort-desc"),l[t]=n;var i,f=g[t],m=function(r,t){return n*f[r].localeCompare(f[t])||n*(r-t)},T=function(n){var t=d(n);if(!r(t)){var u=o(n),a=o(n.map(e));t=d(n.map(function(n){return n.substring(u,r(n)-a)}))}return t}(f);(r(T)||r(T=r(u(i=f.map(Date.parse),isNaN))?[]:i))&&(m=function(r,t){var e=T[r],o=T[t],u=isNaN(e),a=isNaN(o);return u&&a?0:u?-n:a?n:e>o?n:e<o?-n:n*(r-t)});var C,L=N.slice();L.sort(m);for(var E=v;E<c;++E)(C=s[E].parentNode).removeChild(s[E]);for(E=v;E<c;++E)C.appendChild(s[v+L[E-v]])})})}}n.addEventListener("DOMContentLoaded",function(){for(var t=n.getElementsByClassName("tg"),e=0;e<r(t);++e)try{v(t[e])}catch(n){}})}(document)</script>
+
+<h2 id="bit-0-c-carry-flag">Bit 0 - <strong>C</strong>: Carry Flag<a class="headerlink" href="#bit-0-c-carry-flag" title="Permanent link">&para;</a></h2>
+<p>Indicates a <strong>carry</strong> in an arithmetic or logic operation</p>
+<hr />
+<h2 id="bit-1-z-zero-flag">Bit 1 - <strong>Z</strong>: Zero Flag<a class="headerlink" href="#bit-1-z-zero-flag" title="Permanent link">&para;</a></h2>
+<p>Indicates a <strong>zero</strong> result in an arithmetic or logic operation</p>
+<hr />
+<h2 id="bit-2-n-negative-flag">Bit 2 - <strong>N</strong>: Negative Flag<a class="headerlink" href="#bit-2-n-negative-flag" title="Permanent link">&para;</a></h2>
+<p>Indicates a <strong>negative</strong> result in an arithmetic or logic operation</p>
+<hr />
+<h2 id="bit-3-v-twos-complement-overflow-flag">Bit 3 - <strong>V</strong>: Two's Complement Overflow Flag<a class="headerlink" href="#bit-3-v-twos-complement-overflow-flag" title="Permanent link">&para;</a></h2>
+<p>Supports <strong>two’s complement arithmetic</strong>.</p>
+<hr />
+<h2 id="bit-4-s-sign-flag">Bit 4 - <strong>S</strong>: Sign Flag<a class="headerlink" href="#bit-4-s-sign-flag" title="Permanent link">&para;</a></h2>
+<p><strong>S = N ㊉ V</strong></p>
+<p>Exclusive Or between the <em>Negative Flag</em> (<strong>N</strong>) and the <em>Two’s Complement Overflow Flag</em> (<strong>V</strong>)</p>
+<hr />
+<h2 id="bit-5-h-half-carry-flag">Bit 5 - <strong>H</strong>: Half Carry Flag<a class="headerlink" href="#bit-5-h-half-carry-flag" title="Permanent link">&para;</a></h2>
+<p>Indicates a <strong>half carry</strong> in some arithmetic operations. Very usefull for BCD -Binary Coded Decimal-.</p>
+<hr />
+<h2 id="bit-6-t-bit-copy-storage">Bit 6 - <strong>T</strong>: Bit Copy Storage<a class="headerlink" href="#bit-6-t-bit-copy-storage" title="Permanent link">&para;</a></h2>
+<p>The Bit Copy instructions BLD (Bit LoaD) and BST (Bit STore) use the T-bit as source or destination for the operated bit. A bit from a register in the Register File can be copied into T by the BST instruction, and a bit in T can be copied into a bit in a register in the Register File by the BLD instruction.</p>
+<hr />
+<h2 id="bit-7-i-global-interrupt-enable">Bit 7 - <strong>I</strong>: Global Interrupt Enable<a class="headerlink" href="#bit-7-i-global-interrupt-enable" title="Permanent link">&para;</a></h2>
+<p>The Global Interrupt Enable bit must be set for the interrupts to be enabled. The individual interrupt enable control is then performed in separate control registers. If the Global Interrupt Enable Register is cleared, none of the interrupts are enabled independent of the individual interrupt enable settings. The Ibit is cleared by hardware after an interrupt has occurred, and is set by the RETI instruction to enable subsequent interrupts. The I-bit can also be set and cleared by the application with the SEI and CLI instructions.</p>
+<details open>
+<summary>Example Code</summary>
+<br>
+
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nf">ldi</span><span class="w">   </span><span class="no">r32</span><span class="p">,</span><span class="w"> </span><span class="mi">0xFF</span>
+</code></pre></div></td></tr></table></div>
+
+<br>
+</details>
+
 <hr />
 <script src="https://giscus.app/client.js"
         data-repo="safabey/avr-notes"
@@ -869,7 +1065,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../about.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: About">
+          <a href="settingup.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setting Up Environment">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -879,20 +1075,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                About
+                Setting Up Environment
               </div>
             </div>
           </a>
         
         
           
-          <a href="pin_description.html" class="md-footer__link md-footer__link--next" aria-label="Next: Pin Descriptions">
+          <a href="../WorkingWithGPR/registers_data_transfers.html" class="md-footer__link md-footer__link--next" aria-label="Next: Data Transfers">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Pin Descriptions
+                Data Transfers
               </div>
             </div>
             <div class="md-footer__button md-icon">
